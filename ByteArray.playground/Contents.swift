@@ -100,7 +100,7 @@ func run_two() {
 
 func run_three() {
     let start = CACurrentMediaTime()
-    for _ in 0...1000 {
+    for _ in 0..<1000 {
         splitWithBitmaskLoop()
     }
 
@@ -109,7 +109,7 @@ func run_three() {
 }
 
 // Run 10 tries, each function 1K times.
-for _ in 0...10 {
+for _ in 0..<10 {
     run_one()
     run_two()
     run_three()
@@ -131,6 +131,6 @@ let two = res[1]?.average
 let three = res[2]?.average
 
 print("one: \(one); two: \(two); three: \(three)")
-// one: Optional(24.937879522458058); two: Optional(19.88841210926396); three: Optional(14.999003129270436)
+// one: Optional(24.956257089088798); two: Optional(19.863341977904465); three: Optional(13.57245378646026)
 
 
